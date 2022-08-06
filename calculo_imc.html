@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica|| Calcular IMC</title>
+</head>
+<h1>Calculando IMC</h1>
+<script>
+    function SaltoLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir (frase) {
+        document.write(frase);
+        SaltoLinea();
+    };
+
+    pesoElvis = 87;
+    alturaElvis = 1.87;
+    imcElvis = pesoElvis / (alturaElvis * alturaElvis)
+
+    imprimir(" El IMC de Elvis es:" + imcElvis);
+    SaltoLinea()
+</script>
+
+<script>
+    SaltoLinea()
+    function CalcularImc(peso,altura) {
+        imc = peso/ (altura * altura );
+        return(imc)
+    }
+
+    pesoElvis = 87;
+    alturaElvis = 1.87;
+   imcElvis = CalcularImc(pesoElvis,alturaElvis);
+   imprimir ("El Imc de Elvis es: " + imcElvis)
+
+   //Los parametros tienen un orden, y los datos o valores que asignemos deben ser escritos en el mismo orden//
+
+   pesoCelina = 73;
+   alturaCelina = 1.56;
+   imcCelina = CalcularImc(pesoCelina, alturaCelina)
+   imprimir ("El imc de Celina es: " + imcCelina)
+</script>
+
+<!--Se puede simplificar aun mas el proceso, simplemente agregandole una variable al parametro de la funcion, en este caso peso, altura y nombre. Luego, llamamos a la funcion CalcularImc y le asignamos los valores-->
+
+<script>
+    SaltoLinea()
+    function CalcularImc(peso,altura,nombre) {
+        imc = peso/ (altura * altura );
+        imprimir("El Imc calculado de " + nombre + " es " + imc)
+    }
+
+    CalcularImc(87,1.87,"Elvis");
+    CalcularImc(73, 1.56, "Celina")
+  
+
+</script>
+<body>
+    
+</body>
+</html>
